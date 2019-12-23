@@ -2,8 +2,8 @@
 
 ## Demo
 
-[https://jaredible.github.io/umsl-opc-2019]
+https://jaredible.github.io/umsl-opc-2019
 
 ## Documentation
 
-Please refer to our extensive [Wiki documentation](https://github.com/dingo/api/wiki) for more information.
+Please refer to our extensive [Wiki documentation](https://github.com/jaredible/umsl-opc-2019/wiki) for more information.
