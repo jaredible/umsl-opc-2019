@@ -1,3 +1,8 @@
-html, body {
-    background-color: red;
+main {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+p, .ui.header {
+    margin-bottom: 0 !important;
 }

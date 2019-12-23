@@ -6,10 +6,340 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title>UMSL OPC 2019</title>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.2/dist/semantic.min.css">
-        <link ref="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
     <body>
-        Testing
+        <main>
+            <div class="ui container">
+                <h1 class="ui header">UMSL Open Programming Competition 2019</h1>
+                <div class="ui segment">
+                    <h2 class="ui header">Problem 1: Inverted Number Pyramid</h2>
+                    <p>
+                        In this first problem, your program will take a single positive
+                        number as a command line argument (an integer between 0 and 9
+                        inclusive). Your program should then produce an inverted
+                        pyramid-like structure with a number of rows equal to that number.
+                        The first row should have as many numbers as that number, with the
+                        first row consisting of 1's, the second row consisting of 2's and
+                        so on, with the length of each row decreasing by one each time.
+                    </p>
+                    <h3 class="ui header">Input</h3>
+                    <p>
+                        The program should take as a command line argument an integer from
+                        0 to 9. For example:
+                    </p>
+                    <code>
+                        prompt$ prog1 5
+                    </code>
+                    <h3 class="ui header">Output</h3>
+                    <p>
+                        Your program should output the inverted pyramid with no extra
+                        ending spaces and each line should end with an endline.
+                    </p>
+                    <br>
+                    <table class="ui celled table">
+                        <thead>
+                            <tr>
+                                <th>Invocation</th>
+                                <th>Output</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="top aligned">
+                                <td>
+                                    <kbd>
+                                        3
+                                    </kbd>
+                                </td>
+                                <td>
+                                    <samp>
+                                        111<br>
+                                        22<br>
+                                        3
+                                    </samp>
+                                </td>
+                            </tr>
+                            <tr class="top aligned">
+                                <td>
+                                    <kbd>
+                                        4
+                                    </kbd>
+                                </td>
+                                <td>
+                                    <samp>
+                                        1111<br>
+                                        222<br>
+                                        33<br>
+                                        4
+                                    </samp>
+                                </td>
+                            </tr>
+                            <tr class="top aligned">
+                                <td>
+                                    <kbd>
+                                        1
+                                    </kbd>
+                                </td>
+                                <td>
+                                    <samp>
+                                        1
+                                    </samp>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="ui form">
+                                        <div class="inline field">
+                                            <input id="input-p1" type="text" placeholder="Enter input">
+                                        </div>
+                                        <div class="inline field">
+                                            <button class="ui button">Execute</button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <samp></samp>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="ui segment">
+                    <h2 class="ui header">Problem 2: Compute Pairwise Distance maps from Points in 3D Space</h2>
+                    <p>
+                        You are given the x, y, and z coordinates of N number or points in
+                        a 3D coordinate system. Your task is to compute Euclidian distance
+                        between each point with every other point and print it in the form
+                        of a table (usually known as distance map).
+                    </p>
+                    <h3 class="ui header">Input</h3>
+                    <p>
+                        The input to your program is a text file with three columns and N
+                        rows, space delimited. Each row represents a point in the 3D space.
+                        The three columns are the x, y, and z coordinates of the
+                        corresponding point. For example, if we wanted to run it using the
+                        input file input3d.txt, it should run as follows:
+                    </p>
+                    <code>
+                        prompt$ prog2 input3d.txt
+                    </code>
+                    <h3 class="ui header">Output</h3>
+                    <p>
+                        The output of your program will be a distance map (a 2D matrix)
+                        of size N by N written to stdout. The order of the distance matrix
+                        should follow the order of the input points. For example, if we
+                        consider the first row as point 1, the first cell in the distance
+                        matrix should correspond to the distance between point 1 and itself.
+                        Similarly, the cell (5, 7) should correspond to the distance
+                        between points 5 and 7. This output should be rounded down to a
+                        single decimal digit of precision.
+                    </p>
+                    <br>
+                    <table class="ui celled table">
+                        <thead>
+                            <tr>
+                                <th>Input file contents</th>
+                                <th>Output</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="top aligned">
+                                <td>
+                                    <kbd>
+                                        -7.7 0.8 0.9<br>
+                                        -3.9 1.4 1.5<br>
+                                        -0.7 1.0 -0.6
+                                    </kbd>
+                                </td>
+                                <td>
+                                    <samp>
+                                        0.0 3.8 7.1<br>
+                                        3.8 0.0 3.8<br>
+                                        7.1 3.8 0.0
+                                    </samp>
+                                </td>
+                            </tr>
+                            <tr class="top aligned">
+                                <td>
+                                    <kbd>
+                                        1.3 2.7 -3.8<br>
+                                        -1.7 1.9 2.8
+                                    </kbd>
+                                </td>
+                                <td>
+                                    <samp>
+                                        0.0 7.2<br>
+                                        7.2 0.0
+                                    </samp>
+                                </td>
+                            </tr>
+                            <tr class="top aligned">
+                                <td>
+                                    <kbd>
+                                        1.1 2.2 3.3<br>
+                                        4.4 -5.5 -6.6<br>
+                                        0.0 0.0 0.0<br>
+                                        -1.1 -2.2 -3.3
+                                    </kdb>
+                                </td>
+                                <td>
+                                    <samp>
+                                        0.0 12.9 4.1 8.2<br>
+                                        12.9 0.0 9.6 7.2<br>
+                                        4.1 9.6 0.0 4.1<br>
+                                        8.2 7.2 4.1 0.0
+                                    </samp>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="ui form">
+                                        <div class="inline field">
+                                            <div class="ui input">
+                                                <textarea id="input-p2" placeholder="Enter input"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="inline field">
+                                            <button class="ui button">Execute</button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <samp></samp>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="ui segment">
+                    <h2 class="ui header">Problem 3: Motel Charges</h2>
+                    <p>
+                        Write a program to properly compute the cheapest rate a person can
+                        get a room for. The rules are as follow. Discounts add up unless
+                        explicitly prohibited.
+                    </p>
+                    <p>
+                        No validation needs to be performed.
+                    </p>
+                    <br>
+                    <p>
+                        AAA gets you 10% discount. But if you are under 19 this is only 5%,
+                        and over 65 gets you 15%.
+                    </p>
+                    <p>
+                        If you are 60 or older you get extra 10% discount if you are resident
+                        of the state and 5% if you are resident of today's friendly state.
+                    </p>
+                    <p>
+                        Military veterans get extra 10% but this cannot be combined with any
+                        AAA discount.
+                    </p>
+                    <p>
+                        If you are paying with a credit card, you get a 10% discount but only
+                        if you are a resident of today's friendly state.
+                    </p>
+                    <h3 class="ui header">Input</h3>
+                    <p>
+                        The input is today's charge (0.01+), local state (US state), today's
+                        friendly state (US state), person's age (1+), AAA membership (AAA/No),
+                        military veteran status (Vet/No), state residency (US state), paying
+                        by credit card (Yes/No). All data supplied through the command line.
+                    </p>
+                    <br>
+                    <p>
+                        For example, suppose that:
+                    </p>
+                    <kbd>
+                        Today's charge is 79.99 and it is Missouri. Friendly state is AK. The
+                        person is age 55, AAA member but not military vet residing in Missouri
+                        and paying with credit.
+                    </kbd>
+                    <p>
+                        The input for this scenario would be:
+                    </p>
+                    <code>
+                        prompt$ prog3 79.99 MO AK 55 YES NO MO YES
+                    </code>
+                    <h3 class="ui header">Output</h3>
+                    <p>
+                        The output will be the cheapest rate truncated to the penny (not rounded).
+                        For example, 56.78 is a valid rate.
+                    </p>
+                    <br>
+                    <table class="ui celled table">
+                        <thead>
+                            <tr>
+                                <th>Command line arguments</th>
+                                <th>Output</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="top aligned">
+                                <td>
+                                    <kbd>
+                                        79.99 MO AK 55 YES NO MO YES
+                                    </kbd>
+                                </td>
+                                <td>
+                                    <samp>
+                                        63.99
+                                    </samp>
+                                </td>
+                            </tr>
+                            <tr class="top aligned">
+                                <td>
+                                    <kbd>
+                                        62.50 MO AK 55 NO NO MO NO
+                                    </kbd>
+                                </td>
+                                <td>
+                                    <samp>
+                                        62.50
+                                    </samp>
+                                </td>
+                            </tr>
+                            <tr class="top aligned">
+                                <td>
+                                    <kbd>
+                                        89.99 AL MO 65 YES YES MO YES
+                                    </kbd>
+                                </td>
+                                <td>
+                                    <kbd>
+                                        80.99
+                                    </kbd>
+                                </td>
+                            </tr>
+                            <tr class="top aligned">
+                                <td>
+                                    <kbd>
+                                        99.99 MO AK 80 YES YES IL YES
+                                    </kbd>
+                                </td>
+                                <td>
+                                    <kbd>
+                                        84.99
+                                    </kbd>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="ui form">
+                                        <div class="field">
+                                            <input id="input-p3" type="text" placeholder="Enter input">
+                                        </div>
+                                        <div class="inline field">
+                                            <button class="ui button">Execute</button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.2/dist/semantic.min.js"></script>
         <script src="js/main.js"></script>
