@@ -1,3 +1,3 @@
 # umsl-opc-2019
 
-[Problems](https://jaredible.github.io/umsl-opc-2019/index.html)
+[View the problems](https://jaredible.github.io/umsl-opc-2019)
