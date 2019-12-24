@@ -2,6 +2,7 @@
 const fastify = require('fastify')()
 const { exec } = require('child_process')
 
+fastify.register(require('fastify-helmet'))
 fastify.use(require('cors')())
 
 fastify.post('/problems/1', {
